@@ -1,3 +1,5 @@
+import Video from "./Video";
+
 export default function QrPage() {
-  return <div>QrPage</div>;
+  return <>qrpage</>;
 }
