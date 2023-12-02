@@ -1,49 +1,29 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useRef, useEffect } from "react";
+import { redirect } from "next/navigation";
 
 const AutoplayVideo = ({ videoSource }) => {
+  const router = useRouter();
   const videoRef = useRef(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
-
-    const playVideo = async () => {
-      try {
-        await video.play();
-      } catch (error) {
-        // Autoplay was prevented, handle the error here
-        console.error("Autoplay was prevented:", error);
-      }
-    };
-
-    const handleInteraction = () => {
-      playVideo();
-      document.removeEventListener("click", handleInteraction);
-    };
-
-    // Add an event listener for user interaction (click) to initiate autoplay
-    document.addEventListener("click", handleInteraction);
-
-    return () => {
-      // Clean up the event listener when the component unmounts
-      document.removeEventListener("click", handleInteraction);
-    };
-  }, []);
-
   const handleVideoEnd = () => {
-    console.log("caca");
+    router.push("/qrpage/intrebari");
+    console.log("video ended");
   };
 
   return (
-    <div>
+    <>
       <video
+        controls
         onEnded={handleVideoEnd}
-        className="w-screen h-screen"
+        className="overflow-hidden min-w-full"
         ref={videoRef}
+        style={{ maxHeight: "100%", width: "100%" }}
       >
         <source src={videoSource} type="video/mp4" />
       </video>
-    </div>
+    </>
   );
 };
 

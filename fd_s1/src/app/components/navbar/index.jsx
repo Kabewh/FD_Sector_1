@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <section className="w-screen h-20 bg-white text-primary font-bold">
+      <section className="fixed z-20 w-screen h-20 bg-white text-primary font-bold">
         <ul className="w-1/2 mx-auto h-full flex justify-center items-center">
           <Link
-            href="/"
+            href="#form"
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             ACASA
