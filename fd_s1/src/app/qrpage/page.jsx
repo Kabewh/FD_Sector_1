@@ -10,7 +10,7 @@ export default function QrPage() {
       <section className="flex flex-col justify-center items-center bg-primary h-screen">
         <img
           src="/logoOrizontal.jpeg"
-          className="-mt-24 lg:w-2/4 xl:-mt-56 2xl:-mt-72"
+          className="-mt-12 lg:w-2/4 xl:-mt-56 2xl:-mt-72"
         />
         <div className="sm:w-1/2 xl:-mt-24 2xl:-mt-56">
           <AutoplayVideo videoSource={video} className="shadow-xl " />
