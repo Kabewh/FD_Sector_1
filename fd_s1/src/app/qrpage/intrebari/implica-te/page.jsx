@@ -15,21 +15,7 @@ export default function Adeziune() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // await fetch(
-    //   "https://forta-dreptei.pockethost.io/api/collections/users/records",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       firstName,
-    //       lastName,
-    //       email,
-    //       phoneNumber,
-    //     }),
-    //   }
-    // );
+
     const data = {
       firstName: firstName,
       lastName: lastName,
