@@ -36,16 +36,17 @@ export default function Adeziune() {
 
   return (
     <>
-      <div className="h-screen w-screen bg-primary text-white pt-24">
-        <div className="w-2/3 md:w-1/2 mx-auto">
-          <img src={""}></img>
-          <h1 className="font-black text-center text-3xl pt-12">Implica-te!</h1>
+      <div className="h-screen w-screen bg-primary text-white">
+        <div className="md:w-1/2 mx-auto">
+          <img className="w-full" src="/logoOrizontal.jpeg" />
+          <h1 className="font-black text-center text-3xl  font-gotham">
+            Implica-te!
+          </h1>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col flex-start items-center space-y-5 mt-12"
+            className="flex flex-col flex-start items-center space-y-7 mt-12"
           >
             <div className="flex flex-col">
-              <label className="">Nume</label>
               <input
                 className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
                 type="text"
@@ -55,7 +56,6 @@ export default function Adeziune() {
               />
             </div>
             <div className="flex flex-col">
-              <label>Prenume</label>
               <input
                 className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
                 type="text"
@@ -65,7 +65,6 @@ export default function Adeziune() {
               />
             </div>
             <div className="flex flex-col">
-              <label>Email</label>
               <input
                 className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
                 type="text"
@@ -75,10 +74,9 @@ export default function Adeziune() {
               />
             </div>
             <div className="flex flex-col">
-              <label>Numar de telefon</label>
               <input
                 className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600 mb-10"
-                type="number"
+                type="text"
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 value={phoneNumber}
                 placeholder="Numar de telefon"

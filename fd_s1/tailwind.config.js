@@ -16,8 +16,11 @@ module.exports = {
         'primary': '#395F2D',
         'secondary': '#4C7E3A',
         'complementary': '#4D1A4E',
+      },
+      fontFamily: {
+        'gotham': ['Gotham', 'sans-serif'],
       }
     },
   },
-  plugins: [],
+  plugins: ["tailwindcss", "postcss-nesting", "autoprefixer"],
 }
