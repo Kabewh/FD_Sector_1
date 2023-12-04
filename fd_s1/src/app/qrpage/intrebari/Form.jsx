@@ -24,13 +24,13 @@ const Form = () => {
   return (
     <section
       id="form"
-      className="w-full flex justify-center items-center text-center h-96 -mt-34 md:mt-0"
+      className="w-full h-full flex justify-center items-center text-center md:mt-0"
     >
-      <div className="p-4 bg-secondary-bg">
+      <div className="p-4">
         <div className="flex space-y-2 text-base">
           {currentQuestion === 0 && (
             <div className="transition ease-in-out duration-300">
-              <h1 className="text-primary font-black text-2xl lg:text-5xl mb-4">
+              <h1 className="text-primary font-gotham font-black text-3xl lg:text-5xl mb-4">
                 Ai fost de acord cu mesajul urmarit?
               </h1>
               <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">

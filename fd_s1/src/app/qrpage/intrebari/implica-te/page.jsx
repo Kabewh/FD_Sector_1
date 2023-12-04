@@ -37,48 +37,46 @@ export default function Adeziune() {
   return (
     <>
       <div className="h-screen w-screen bg-primary text-white">
-        <div className="w-2/3 md:w-1/2 mx-auto">
-          <img src={""}></img>
-          <h1 className="font-black text-center text-3xl pt-12">Implica-te!</h1>
+        <div className="md:w-1/2 mx-auto">
+          <img className="w-full" src="/logoOrizontal.jpeg" />
+          <h1 className="font-black text-center text-3xl  font-gotham">
+            Implica-te!
+          </h1>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col flex-start items-center space-y-5 mt-12"
+            className="flex flex-col flex-start items-center space-y-7 mt-12"
           >
-            <div className="max-w-12">
-              <label>Nume</label>
+            <div className="flex flex-col">
               <input
-                className="w-full text-complementary"
+                className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
                 type="text"
                 onChange={(e) => setLastName(e.target.value)}
                 value={lastName}
                 placeholder="Nume"
               />
             </div>
-            <div>
-              <label>Prenume</label>
+            <div className="flex flex-col">
               <input
-                className="w-full text-complementary"
+                className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
                 type="text"
                 onChange={(e) => setFirstName(e.target.value)}
                 value={firstName}
                 placeholder="Prenume"
               />
             </div>
-            <div>
-              <label>Email</label>
+            <div className="flex flex-col">
               <input
-                className="w-full text-complementary"
+                className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
                 type="text"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 placeholder="Email"
               />
             </div>
-            <div>
-              <label>Numar de telefon</label>
+            <div className="flex flex-col">
               <input
-                className="w-full text-complementary"
-                type="number"
+                className="w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600 mb-10"
+                type="text"
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 value={phoneNumber}
                 placeholder="Numar de telefon"
@@ -86,7 +84,7 @@ export default function Adeziune() {
             </div>
             <button
               type="submit"
-              className="bg-complementary px-5 py-3 rounded-xl shadow-xl font-bold"
+              className="bg-complementary hover:border hover:border-white transition fade-in-out px-8 py-3 rounded-lg shadow-xl font-bold"
             >
               Trimite
             </button>
