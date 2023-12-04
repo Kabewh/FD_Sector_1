@@ -1,45 +1,22 @@
-# syntax = docker/dockerfile:1
+FROM alpine:latest
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=20.9.0
-FROM node:${NODE_VERSION}-slim as base
+ARG PB_VERSION=0.19.4
 
-LABEL fly_launch_runtime="Next.js"
+RUN apk add --no-cache \
+    unzip \
+    ca-certificates
 
-# Next.js app lives here
-WORKDIR /app
+# download and unzip PocketBase
+ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
+RUN unzip /tmp/pb.zip -d /pb/
 
-# Set production environment
-ENV NODE_ENV="production"
+# uncomment to copy the local pb_migrations dir into the image
+# COPY ./pb_migrations /pb/pb_migrations
 
+# uncomment to copy the local pb_hooks dir into the image
+# COPY ./pb_hooks /pb/pb_hooks
 
-# Throw-away build stage to reduce size of final image
-FROM base as build
+EXPOSE 8080
 
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install -y build-essential pkg-config python-is-python3
-
-# Install node modules
-COPY --link package-lock.json package.json ./
-RUN npm ci --include=dev
-
-# Copy application code
-COPY --link . .
-
-# Build application
-RUN npm run build
-
-# Remove development dependencies
-RUN npm prune --omit=dev
-
-
-# Final stage for app image
-FROM base
-
-# Copy built application
-COPY --from=build /app /app
-
-# Start the server by default, this can be overwritten at runtime
-EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+# start PocketBase
+CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8080"]
