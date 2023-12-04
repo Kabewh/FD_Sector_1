@@ -12,7 +12,7 @@ export default function Adeziune() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://127.0.0.1:8090/api/collections/users/records", {
+    await fetch("https://fd-s1.fly.dev/api/collections/users/records", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
