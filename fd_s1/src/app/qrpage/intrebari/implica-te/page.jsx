@@ -1,8 +1,11 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import PocketBase from "pocketbase";
 
 export default function Adeziune() {
+  const pb = new PocketBase("https://forta-dreptei.pockethost.io");
+
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,18 +15,31 @@ export default function Adeziune() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://fd-s1.fly.dev/api/collections/users/records", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-      }),
-    });
+    // await fetch(
+    //   "https://forta-dreptei.pockethost.io/api/collections/users/records",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       firstName,
+    //       lastName,
+    //       email,
+    //       phoneNumber,
+    //     }),
+    //   }
+    // );
+    const data = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phoneNumber: phoneNumber,
+    };
+
+    const record = await pb.collection("users").create(data);
+
+    // console.log(resultList);
 
     setFirstName("");
     setLastName("");
