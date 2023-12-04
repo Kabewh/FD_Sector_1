@@ -15,13 +15,13 @@ export default function QrPage() {
         <div className="sm:w-1/2 xl:-mt-24 2xl:-mt-56">
           <AutoplayVideo videoSource={video} className="shadow-xl " />
         </div>
-        <div className="text-white mt-12 mx-4">
-          <p className="font-bold">PARTIDUL POLITIC</p>
-          <h1 className="font-black text-4xl">Autentic de dreapta</h1>
+        <div className="text-white mt-12 mx-4 flex flex-col items-center justify-center text-center">
+          <p className="font-bold mb-1">PARTIDUL POLITIC</p>
+          <h1 className="font-black text-4xl mb-2">Autentic de dreapta</h1>
           <h3 className="italic font-medium">
-            Adevărații liberali sunt alături de Ludovic Orban și Forța Dreptei,
-            oameni care își respectă cuvântul dat în alegeri și care sunt loiali
-            doar cetățenilor.
+            Adevărații liberali sunt alături <br></br> de Ludovic Orban și Forța
+            Dreptei, oameni care își respectă cuvântul dat în alegeri și care
+            sunt loiali doar cetățenilor.
           </h3>
           <img src="/prinNoiInsine.png" className="w-48 mt-2" />
         </div>
