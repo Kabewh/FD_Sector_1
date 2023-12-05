@@ -12,7 +12,7 @@ export default function QrPage() {
       <section className="flex flex-col md:h-full justify-center items-center bg-primary">
         <img
           src="/logoOrizontal.jpeg"
-          className="block md:hidden -mt-12 md:m-0 lg:w-2/4 xl:-mt-56 2xl:-mt-72"
+          className="block md:hidden lg:w-2/4 xl:-mt-56 2xl:-mt-72"
         />
         <img
           src="/logoVertical2Long.jpg"

@@ -118,7 +118,7 @@ export default function Adeziune() {
       <div className="h-full w-screen bg-primary text-white">
         <div className="md:w-1/2 mx-auto md:flex md:flex-col md:items-center md:justify-center">
           <img className="md:hidden w-full" src="/logoOrizontal.jpeg" />
-          <img className="w-2/3" src="/logoOrizontal.jpeg" />
+          <img className="hidden md:block w-2/3" src="/logoOrizontal.jpeg" />
           <h1 className="font-black text-center -mt-5 text-3xl font-gotham">
             Implica-te!
           </h1>
