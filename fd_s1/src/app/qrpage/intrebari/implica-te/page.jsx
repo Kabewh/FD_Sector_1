@@ -127,11 +127,10 @@ export default function Adeziune() {
             className="flex flex-col flex-start items-center space-y-5 mt-5"
           >
             <div className="flex flex-col">
-              <span className="text-red-500 font-semibold">
-                {lastNameError}
-              </span>
               <input
-                className="w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
+                className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
+                  lastNameError ? "border-red-500" : "border-emerald-500"
+                } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handleLastNameChange(e.target.value)}
                 value={lastName}
@@ -139,11 +138,10 @@ export default function Adeziune() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-red-500 font-semibold">
-                {firstNameError}
-              </span>
               <input
-                className="w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
+                className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
+                  firstNameError ? "border-red-500" : "border-emerald-500"
+                } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handleFirstNameChange(e.target.value)}
                 value={firstName}
@@ -151,9 +149,10 @@ export default function Adeziune() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-red-500 font-semibold">{emailError}</span>
               <input
-                className="w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
+                className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
+                  emailError ? "border-red-500" : "border-emerald-500"
+                } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handleEmailChange(e.target.value)}
                 value={email}
@@ -161,11 +160,10 @@ export default function Adeziune() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-red-500  font-semibold">
-                {phoneNumberError}
-              </span>
               <input
-                className="w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
+                className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
+                  phoneNumberError ? "border-red-500" : "border-emerald-500"
+                } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handlePhoneNumberChange(e.target.value)}
                 value={phoneNumber}

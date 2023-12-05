@@ -19,7 +19,7 @@ export default function QrPage() {
           className="hidden md:block my-6 w-2/4"
         />
         <div className="md:w-4/6">
-          <AutoplayVideo videoSource={video} className="shadow-xl" />
+          <AbutoplayVideo videoSource={video} className="shadow-xl" />
         </div>
         <div className="md:hidden text-white mt-12 mx-4 flex flex-col items-center justify-center text-center">
           <p className="font-bold mb-1">PARTIDUL POLITIC</p>
