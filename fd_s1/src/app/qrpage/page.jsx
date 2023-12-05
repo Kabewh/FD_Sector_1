@@ -7,9 +7,9 @@ export default function QrPage() {
   const video = "orbanReal.mp4";
 
   return (
-    <>
+    <div className="overflow-hidden h-full white-tree">
       <Navbar />
-      <section className="flex flex-col md:h-full justify-center items-center bg-primary">
+      <section className="flex flex-col h-full md:justify-start items-center bg-primary md:w-5/6 md:mx-auto md:shadow-2xl">
         <img
           src="/logoOrizontal.jpeg"
           className="block md:hidden lg:w-2/4 xl:-mt-56 2xl:-mt-72"
@@ -18,7 +18,7 @@ export default function QrPage() {
           src="/logoVertical2Long.jpg"
           className="hidden md:block my-6 w-2/4"
         />
-        <div className="md:w-4/6">
+        <div className="w-5/6">
           <AutoplayVideo videoSource={video} className="shadow-xl" />
         </div>
         <div className="md:hidden text-white mt-12 mx-4 flex flex-col items-center justify-center text-center">
@@ -32,6 +32,6 @@ export default function QrPage() {
           <img src="/prinNoiInsine.png" className="w-48 mt-2" />
         </div>
       </section>
-    </>
+    </div>
   );
 }

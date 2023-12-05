@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${inter.className} bg-primary w-full`}
+        className={`${inter.className} bg-primary h-screen w-full`}
       >
         {children}
       </body>
