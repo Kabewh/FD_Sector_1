@@ -17,7 +17,7 @@ export default function QrPage() {
         </div>
         <div className="text-white mt-12 mx-4 flex flex-col items-center justify-center text-center">
           <p className="font-bold mb-1">PARTIDUL POLITIC</p>
-          <h1 className="font-black text-4xl mb-2">Autentic de dreapta</h1>
+          <h1 className="text-4xl mb-2 font-gotham">Autentic de dreapta</h1>
           <h3 className="italic font-medium">
             Adevărații liberali sunt alături <br></br> de Ludovic Orban și Forța
             Dreptei, oameni care își respectă cuvântul dat în alegeri și care
