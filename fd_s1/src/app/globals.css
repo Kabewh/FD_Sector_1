@@ -9,3 +9,7 @@ html {
   font-family: "Gotham";
   src: url("../../public/fonts/Gotham-Black.otf") format("opentype");
 }
+
+.white-tree {
+  background-image: url("../../public/fortadreptei_bg.png");
+}

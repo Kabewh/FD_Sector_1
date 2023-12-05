@@ -19,9 +19,8 @@ const AutoplayVideo = ({ videoSource }) => {
         onEnded={handleVideoEnd}
         className="overflow-hidden min-w-full"
         ref={videoRef}
-        style={{ maxHeight: "100%", width: "100%" }}
       >
-        <source src={videoSource} type="video/mp4" />
+        <source src={videoSource} type="video/mp4" className="w-screen" />
       </video>
     </>
   );

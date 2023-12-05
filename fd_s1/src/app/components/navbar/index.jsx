@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <section className="fixed z-20 w-screen h-20 bg-white text-primary font-bold">
+      <section className="hidden md:block w-full h-20 bg-white text-primary font-bold">
         <ul className="w-1/2 mx-auto h-full flex justify-center items-center">
           <Link
             href="#form"
