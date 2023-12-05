@@ -18,7 +18,7 @@ export default function QrPage() {
           src="/logoVertical2long.jpg"
           className="hidden md:block my-6 w-2/4"
         />
-        <div className="w-5/6">
+        <div className="md:w-5/6">
           <AutoplayVideo videoSource={video} className="shadow-xl" />
         </div>
         <div className="md:hidden text-white mt-12 mx-4 flex flex-col items-center justify-center text-center">
