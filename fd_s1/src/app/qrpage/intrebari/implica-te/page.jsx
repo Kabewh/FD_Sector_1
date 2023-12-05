@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import PocketBase from "pocketbase";
+import Navbar from "@/app/components/navbar";
 
 export default function Adeziune() {
   const pb = new PocketBase("https://forta-dreptei.pockethost.io");
@@ -26,9 +27,7 @@ export default function Adeziune() {
       setLastNameError("Numele este obligatoriu");
       valid = false;
     } else {
-      setLastNameError(
-        "w-64 text-complementary h-12 min-w-[12rem] rounded-lg border-emerald-500 indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600"
-      );
+      setLastNameError("");
     }
 
     if (firstName.trim() === "") {
@@ -115,6 +114,7 @@ export default function Adeziune() {
 
   return (
     <>
+      <Navbar />
       <div className="h-full w-screen bg-primary text-white">
         <div className="md:w-1/2 mx-auto md:flex md:flex-col md:items-center md:justify-center">
           <img className="md:hidden w-full" src="/logoOrizontal.jpeg" />
