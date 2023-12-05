@@ -15,7 +15,7 @@ export default function QrPage() {
           className="block md:hidden lg:w-2/4 xl:-mt-56 2xl:-mt-72"
         />
         <img
-          src="/logoVertical2Long.jpg"
+          src="/logoVertical2long.jpg"
           className="hidden md:block my-6 w-2/4"
         />
         <div className="w-5/6">
