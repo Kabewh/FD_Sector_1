@@ -10,7 +10,7 @@ const Form = () => {
     return (
       <div
         onClick={handleClick}
-        className="w-20 h-10 bg-primary rounded-lg flex items-center justify-center cursor-pointer shadow-xl hover:bg-complementary hover:text-secondary transition duration-300"
+        className="w-20 h-10 bg-complementary rounded-lg flex items-center justify-center cursor-pointer shadow-xl hover:border hover:border-white transition fade-in-out rounded-lg shadow-xl font-bold transition duration-300"
       >
         {text}
       </div>
@@ -24,40 +24,41 @@ const Form = () => {
   return (
     <section
       id="form"
-      className="w-full h-full flex justify-center items-center text-center md:mt-0"
+      className="w-full h-full bg-primary flex text-center md:mt-0"
     >
-      <div className="p-4">
-        <div className="flex space-y-2 text-base">
+      <div className="flex flex-col space-y-2 text-base">
+        <img className="w-full mt-24" src="/logoOrizontal.jpeg" />
+        <div className="mx-4">
           {currentQuestion === 0 && (
             <div className="transition ease-in-out duration-300">
-              <h1 className="text-primary font-gotham font-black text-3xl lg:text-5xl mb-4">
+              <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">
                 Ai fost de acord cu mesajul urmarit?
               </h1>
               <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">
                 <ChoiceButton text={"DA"} handleClick={handleNextClick} />
-                <ChoiceButton text={"NU"} />
+                <ChoiceButton text={"NU"} handleClick={handleNextClick} />
               </div>
             </div>
           )}
           {currentQuestion === 1 && (
             <div className="transition ease-in-out duration-300">
-              <h1 className="text-primary font-black text-2xl lg:text-5xl mb-4">
+              <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">
                 Simti nevoia de a face parte din schimbare?
               </h1>
               <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">
                 <ChoiceButton text={"DA"} handleClick={handleNextClick} />
-                <ChoiceButton text={"NU"} />
+                <ChoiceButton text={"NU"} handleClick={handleNextClick} />
               </div>
             </div>
           )}
           {currentQuestion === 2 && (
             <div className="transition ease-in-out duration-300">
-              <h1 className="text-primary font-black text-2xl lg:text-5xl mb-4">
+              <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">
                 Doresti o echipa care sa-ti ajute scopul?
               </h1>
               <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">
                 <ChoiceButton text={"DA"} handleClick={handleNextClick} />
-                <ChoiceButton text={"NU"} />
+                <ChoiceButton text={"NU"} handleClick={handleNextClick} />
               </div>
             </div>
           )}
