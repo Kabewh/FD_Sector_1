@@ -6,19 +6,19 @@ export default function Navbar() {
       <section className="hidden md:block w-full h-20 bg-white text-primary font-bold">
         <ul className="w-1/2 mx-auto h-full flex justify-center items-center">
           <Link
-            href="#form"
+            href="#"
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             ACASA
           </Link>
           <Link
-            href="/implica-te"
+            href="#"
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             IMPLICA-TE
           </Link>
           <Link
-            href="/contact"
+            href="#"
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             CONTACT

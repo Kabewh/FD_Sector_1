@@ -113,10 +113,10 @@ export default function Adeziune() {
   };
 
   return (
-    <>
+    <div className="h-full overflow-hidden white-tree">
       <Navbar />
-      <div className="h-full w-screen bg-primary text-white">
-        <div className="md:w-1/2 mx-auto md:flex md:flex-col md:items-center md:justify-center">
+      <div className="h-full w-screen text-white">
+        <div className="md:w-1/2 h-full bg-primary mx-auto md:flex md:flex-col md:items-center md:shadow-xl">
           <img className="md:hidden w-full" src="/logoOrizontal.jpeg" />
           <img className="hidden md:block w-2/3" src="/logoOrizontal.jpeg" />
           <h1 className="font-black text-center -mt-5 text-3xl font-gotham">
@@ -124,12 +124,14 @@ export default function Adeziune() {
           </h1>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col flex-start items-center space-y-5 mt-5"
+            className="flex flex-col flex-start items-center space-y-5 md:space-y-8 mt-5 pb-10"
           >
             <div className="flex flex-col">
               <input
                 className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
-                  lastNameError ? "border-red-500" : "border-emerald-500"
+                  lastNameError
+                    ? "border-red-500 focus:outline-none focus:none focus:ring-zinc-600"
+                    : ""
                 } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handleLastNameChange(e.target.value)}
@@ -140,7 +142,9 @@ export default function Adeziune() {
             <div className="flex flex-col">
               <input
                 className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
-                  firstNameError ? "border-red-500" : "border-emerald-500"
+                  firstNameError
+                    ? "border-red-500 focus:outline-none focus:none focus:ring-zinc-600"
+                    : ""
                 } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handleFirstNameChange(e.target.value)}
@@ -151,7 +155,9 @@ export default function Adeziune() {
             <div className="flex flex-col">
               <input
                 className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
-                  emailError ? "border-red-500" : "border-emerald-500"
+                  emailError
+                    ? "border-red-500 focus:outline-none focus:none focus:ring-zinc-600"
+                    : ""
                 } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handleEmailChange(e.target.value)}
@@ -162,7 +168,9 @@ export default function Adeziune() {
             <div className="flex flex-col">
               <input
                 className={`w-72 text-complementary h-12 min-w-[12rem] rounded-lg border-2 ${
-                  phoneNumberError ? "border-red-500" : "border-emerald-500"
+                  phoneNumberError
+                    ? "border-red-500 focus:outline-none focus:none focus:ring-zinc-600"
+                    : ""
                 } indent-4 text-emerald-900 shadow-lg focus:outline-none focus:ring focus:ring-emerald-600`}
                 type="text"
                 onChange={(e) => handlePhoneNumberChange(e.target.value)}
@@ -180,6 +188,7 @@ export default function Adeziune() {
           </form>
         </div>
       </div>
-    </>
+      {/* <img src="/echipa_banner.png" className="w-screen opacity-75" /> */}
+    </div>
   );
 }
