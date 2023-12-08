@@ -73,7 +73,7 @@ const Form = () => {
               </div>
             )}
             {currentQuestion === 3 &&
-              router.push("/qrpage/intrebari/implica-te")}
+              router.push("/descopera/intrebari/implica-te")}
           </div>
         </div>
       </section>

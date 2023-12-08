@@ -6,7 +6,7 @@ const AutoplayVideo = ({ videoSource }) => {
   const router = useRouter();
 
   const handleVideoEnd = () => {
-    router.push("/qrpage/intrebari");
+    router.push("/descopera/intrebari");
   };
 
   return (
