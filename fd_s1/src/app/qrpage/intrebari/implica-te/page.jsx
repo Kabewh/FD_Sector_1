@@ -116,11 +116,11 @@ export default function Adeziune() {
     <div className="h-screen overflow-hidden white-tree">
       <Navbar />
       <div className="h-full w-screen text-white">
-        <div className="md:w-1/2 h-full bg-primary mx-auto md:flex md:flex-col md:items-center md:shadow-xl">
-          <img className="md:hidden w-full" src="/logoOrizontal.jpeg" />
+        <div className="md:w-1/2 h-full bg-primary mx-auto flex flex-col items-center md:shadow-xl">
+          <img className="md:hidden w-1/2 py-6" src="/logoOrizontal.jpeg" />
           <img className="hidden md:block h-1/3" src="/logoOrizontal.jpeg" />
           <div className="flex flex-col h-2/3">
-            <h1 className="font-black text-center -mt-5 text-3xl md:text-5xl font-gotham">
+            <h1 className="font-black text-center text-3xl md:text-5xl font-gotham">
               Implica-te!
             </h1>
             <form

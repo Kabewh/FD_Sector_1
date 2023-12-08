@@ -29,17 +29,20 @@ const Form = () => {
         id="form"
         className="md:w-1/2 mx-auto h-full bg-primary flex text-center md:mt-0"
       >
-        <div className="md:w-full flex flex-col md:items-center text-base">
-          <img className="md:hidden w-full mt-24" src="/logoOrizontal.jpeg" />
+        <div className="md:w-full flex flex-col items-center text-base">
+          <img
+            className="md:hidden pt-10 pb-6 w-2/5"
+            src="/logoOrizontal.jpeg"
+          />
           <img
             className="hidden md:block w-full md:mt-36"
             src="/logoVertical2long.jpg"
           />
-          <div className="mx-4 md:flex h-3/5 md:items-center md:justify-center md:py-5 md:w-full">
+          <div className="mx-4 h-2/4 flex items-center justify-center md:py-5 md:w-full">
             {currentQuestion === 0 && (
               <div className="transition ease-in-out duration-300">
                 <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">
-                  Ai fost de acord cu mesajul urmarit?
+                  Ești gata să faci o schimbare?
                 </h1>
                 <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">
                   <ChoiceButton text={"DA"} handleClick={handleNextClick} />
@@ -50,7 +53,7 @@ const Form = () => {
             {currentQuestion === 1 && (
               <div className="transition ease-in-out duration-300">
                 <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">
-                  Simti nevoia de a face parte din schimbare?
+                  Vrei să fii vocea schimbării?
                 </h1>
                 <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">
                   <ChoiceButton text={"DA"} handleClick={handleNextClick} />
@@ -61,7 +64,7 @@ const Form = () => {
             {currentQuestion === 2 && (
               <div className="transition ease-in-out duration-300">
                 <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">
-                  Doresti o echipa care sa-ti ajute scopul?
+                  Crezi în puterea unității?
                 </h1>
                 <div className="flex justify-center items-center space-x-20 mt-10 text-white font-bold">
                   <ChoiceButton text={"DA"} handleClick={handleNextClick} />
