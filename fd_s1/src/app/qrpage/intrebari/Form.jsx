@@ -35,7 +35,7 @@ const Form = () => {
             className="hidden md:block w-full md:mt-36"
             src="/logoVertical2long.jpg"
           />
-          <div className="md:mt-48 mx-4 md:flex md:items-center md:justify-center md:py-5 md:w-full">
+          <div className="mx-4 md:flex h-3/5 md:items-center md:justify-center md:py-5 md:w-full">
             {currentQuestion === 0 && (
               <div className="transition ease-in-out duration-300">
                 <h1 className="text-white font-black text-3xl lg:text-5xl mb-4">

@@ -1,26 +1,24 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useRef, useEffect } from "react";
-import { redirect } from "next/navigation";
 
 const AutoplayVideo = ({ videoSource }) => {
   const router = useRouter();
-  const videoRef = useRef(null);
 
   const handleVideoEnd = () => {
     router.push("/qrpage/intrebari");
-    console.log("video ended");
   };
 
   return (
     <>
       <video
+        muted
         controls
         onEnded={handleVideoEnd}
-        className="overflow-hidden min-w-full"
-        ref={videoRef}
+        className="w-[100vh]"
+        autoPlay // Add the autoPlay attribute to start video automatically
       >
-        <source src={videoSource} type="video/mp4" className="w-screen" />
+        <source src={videoSource} type="video/mp4" />
       </video>
     </>
   );
