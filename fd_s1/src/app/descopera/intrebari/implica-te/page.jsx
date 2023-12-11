@@ -87,7 +87,6 @@ export default function Adeziune() {
       return;
     }
     setIsLoading(true);
-    console.log(firstName);
 
     try {
       await CreateUser({

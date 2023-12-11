@@ -6,13 +6,19 @@ export default function Navbar() {
       <section className="hidden md:block w-full h-20 bg-white text-primary font-bold">
         <ul className="w-1/2 mx-auto h-full flex justify-center items-center">
           <Link
-            href="#"
+            href="/"
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             ACASA
           </Link>
           <Link
-            href="#"
+            href="/descopera/intrebari"
+            className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
+          >
+            DESCOPERA
+          </Link>
+          <Link
+            href="/descopera/intrebari/implica-te"
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             IMPLICA-TE
@@ -22,12 +28,6 @@ export default function Navbar() {
             className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
           >
             CONTACT
-          </Link>
-          <Link
-            href="/qrpage"
-            className="w-32 h-full flex items-center justify-center border-x hover:bg-complementary hover:text-white transition ease-in-out duration-300"
-          >
-            QR
           </Link>
         </ul>
       </section>
