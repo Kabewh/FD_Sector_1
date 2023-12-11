@@ -1,5 +1,5 @@
 import CreateUser from "./users/CreateUser";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import AutoplayVideo from "./descopera/Video";
 
 export default function Home() {

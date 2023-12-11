@@ -16,7 +16,7 @@ const AutoplayVideo = ({ videoSource }) => {
         controls
         onEnded={handleVideoEnd}
         className="w-[100vh]"
-        autoPlay // Add the autoPlay attribute to start video automatically
+        autoPlay
       >
         <source src={videoSource} type="video/mp4" />
       </video>

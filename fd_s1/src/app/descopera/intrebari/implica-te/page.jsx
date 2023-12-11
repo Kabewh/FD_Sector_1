@@ -1,25 +1,24 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import PocketBase from "pocketbase";
-import Navbar from "@/app/components/navbar";
+import Navbar from "@/app/components/Navbar";
+import CreateUser from "./CreateUser";
 
 export default function Adeziune() {
-  const pb = new PocketBase("https://forta-dreptei.pockethost.io");
+  const logo = "../logo.jpeg";
+  const router = useRouter();
 
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
-  const logo = "../logo.jpeg";
 
   const [lastNameError, setLastNameError] = useState("");
   const [firstNameError, setFirstNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [phoneNumberError, setPhoneNumberError] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
   const validateForm = () => {
     let valid = true;
 
@@ -84,21 +83,19 @@ export default function Adeziune() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) {
       return;
     }
-
-    const data = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      phoneNumber: phoneNumber,
-    };
-
     setIsLoading(true);
+    console.log(firstName);
+
     try {
-      const record = await pb.collection("users").create(data);
+      await CreateUser({
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+      });
     } catch (error) {
       console.log(error);
     } finally {
@@ -190,7 +187,6 @@ export default function Adeziune() {
           </div>
         </div>
       </div>
-      {/* <img src="/echipa_banner.png" className="w-screen opacity-75" /> */}
     </div>
   );
 }
